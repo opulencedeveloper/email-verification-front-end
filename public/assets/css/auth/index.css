@@ -1,0 +1,776 @@
+.auth-page-wrapper {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--color-white);
+    background-image: 
+        url('/assets/images/background/top-left-one.svg'),
+        url('/assets/images/background/top-left-two.svg'),
+        url('/assets/images/background/top-right.svg'),
+        url('/assets/images/background/bottom-left.svg');
+    background-position: 
+        top left,
+        top left,
+        top right,
+        bottom left;
+    background-repeat: no-repeat;
+    background-size: 
+        auto,
+        auto,
+        auto,
+        auto;
+    border: 1.5px solid var(--color-border-focus);
+    box-sizing: border-box;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.login-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 16px 16px 48px 0px var(--color-shadow-card);
+    padding: 48px;
+    width: 100%;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease-out 0.2s forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-title {
+    font-family: 'SFProDisplayBold', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin: 0 0 14px 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFadeIn 0.5s ease-out 0.4s forwards;
+}
+
+.login-subtitle {
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin: 0 0 30px 0;
+    padding: 0;
+    opacity: 0;
+    line-height: 140%;
+    transform: translateY(20px);
+    animation: slideUpFadeIn 0.5s ease-out 0.5s forwards;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFadeIn 0.5s ease-out forwards;
+}
+
+.form-group--email {
+    animation-delay: 0.7s;
+}
+
+.form-group--password {
+    animation-delay: 0.8s;
+}
+
+.signup-form .form-group--password {
+    margin-bottom: 16px;
+}
+
+.form-group--checkbox {
+    animation-delay: 0.9s;
+}
+
+.form-group--retype-password {
+    animation-delay: 0.9s;
+    margin-bottom: 16px;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+.signup-form .form-group--retype-password:last-of-type {
+    margin-bottom: 16px;
+}
+
+.form-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.form-label {
+    font-family: 'SFProDisplayMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-label-row .form-label {
+    margin-bottom: 0;
+}
+
+.forgot-password-link {
+    font-family: 'SFProDisplayMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-black);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.forgot-password-link:hover {
+    color: var(--color-black);
+    text-decoration: underline;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    background: var(--color-white);
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 3px var(--color-shadow-focus);
+}
+
+.form-input::placeholder {
+    color: var(--color-text-placeholder);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.form-checkbox {
+    width: 18px;
+    height: 18px;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+    accent-color: var(--color-border-focus);
+}
+
+.checkbox-label {
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.login-button {
+    width: 100%;
+    height: 38px;
+    background: linear-gradient(to right, var(--color-button-gradient-start), var(--color-button-gradient-end));
+    border: none;
+    border-radius: 8px;
+    font-family: 'SFProDisplayMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    margin-top: 16px;
+    font-weight: 500;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFadeIn 0.5s ease-out 1s forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.signup-form .login-button {
+    margin-top: 0;
+}
+
+.login-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--color-overlay-white);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.login-button:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+.login-button:hover:not(.loading) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--color-shadow-button);
+}
+
+.login-button:active:not(.loading) {
+    transform: translateY(0);
+}
+
+.signup-link {
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-black);
+    text-align: center;
+    margin: 32px 0 0 0;
+    padding: 0;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 1.1s forwards;
+}
+
+.signup-link-text {
+    color: var(--color-black);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.signup-link-text:hover {
+    color: var(--color-black);
+}
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-placeholder);
+    transition: color 0.2s ease;
+    outline: none;
+    z-index: 1;
+}
+
+.password-toggle:hover {
+    color: var(--color-text-primary);
+}
+
+.password-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.password-input-wrapper .form-input {
+    padding-right: 44px;
+}
+
+.terms-text {
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin: 16px auto 0 auto;
+    padding: 0;
+    line-height: 1.5;
+    max-width: 324px;
+}
+
+.terms-link {
+    color: var(--color-black);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.terms-link:hover {
+    color: var(--color-text-primary);
+}
+
+.form-input.error {
+    border-color: var(--color-error);
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.login-button.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.login-button.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid var(--color-overlay-white);
+    border-top-color: var(--color-white);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login-container,
+    .login-card,
+    .login-title,
+    .login-subtitle,
+    .form-group,
+    .login-button,
+    .signup-link {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.verify-email-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 16px 16px 48px 0px var(--color-shadow-card);
+    padding: 42.13px 24px 31px 24px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease-out 0.2s forwards;
+    will-change: transform, opacity;
+}
+
+.verify-email-icon {
+    margin: 0 auto 32px auto;
+    width: 143.31px;
+    height: 113.74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.4s forwards;
+}
+
+.verify-email-icon img {
+    width: 143.31px;
+    height: 113.74px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(245, 157, 0, 0.2));
+}
+
+.verify-email-title {
+    font-family: 'SFProDisplayBold', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin: 0 0 24px 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFadeIn 0.5s ease-out 0.6s forwards;
+}
+
+.verify-email-content {
+    margin: 0 auto 31px auto;
+    max-width: 442px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.8s forwards;
+}
+
+.verify-email-text {
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.verify-email-text:last-child {
+    margin-bottom: 0;
+}
+
+.verify-email-address {
+    color: var(--color-text-primary);
+}
+
+.resend-link {
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-icon-primary);
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    display: inline-block;
+    opacity: 0;
+    margin-bottom: 7px;
+    animation: fadeIn 0.5s ease-out 1s forwards;
+}
+
+.resend-link:hover {
+    color: var(--color-button-gradient-start);
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .verify-email-card,
+    .verify-email-icon,
+    .verify-email-title,
+    .verify-email-content,
+    .resend-link {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 32px 24px;
+        max-width: 100%;
+    }
+    
+    .login-title {
+        font-size: 28px;
+    }
+    
+    .login-subtitle {
+        font-size: 13px;
+    }
+    
+    .verify-email-card {
+        padding: 32px 24px;
+        max-width: 100%;
+    }
+    
+    .verify-email-title {
+        font-size: 28px;
+    }
+    
+    .verify-email-text {
+        font-size: 14px;
+    }
+    
+    .success-card {
+        padding: 302px 24px;
+        max-width: 100%;
+    }
+    
+    .success-title {
+        font-size: 28px;
+    }
+    
+    .success-text {
+        font-size: 16px;
+    }
+}
+
+.success-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    border: 1px solid var(--color-border-light-blue);
+    box-shadow: 16px 16px 48px 0px var(--color-shadow-card);
+    padding: 36.5px 24px 24px 24px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease-out 0.2s forwards;
+    will-change: transform, opacity;
+}
+
+.success-icon {
+    margin: 0 auto 28px auto;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.4s forwards;
+}
+
+.success-icon img {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+
+.success-title {
+    font-family: 'SFProDisplayBold', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin: 0 0 13px 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFadeIn 0.5s ease-out 0.6s forwards;
+}
+
+.success-text {
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin: 0 0 32px 0;
+    padding: 0;
+    line-height: 1.5;
+    padding-left: 1px;
+    padding-right: 1px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.8s forwards;
+}
+
+.success-button {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 24px;
+    background: var(--color-icon-primary);
+    border: none;
+    border-radius: 8px;
+    font-family: 'SFProDisplayMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-white);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    outline: none;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 1s forwards;
+    box-sizing: border-box;
+}
+
+.success-button:hover {
+    background: var(--color-button-gradient-start);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--color-shadow-button);
+}
+
+.success-button:active {
+    transform: translateY(0);
+}
+
+.reset-password-form {
+    max-width: 404px !important;
+    margin: 0 auto;
+}
+
+.reset-password-card .login-subtitle {
+    margin-bottom: 16px;
+}
+
+.reset-password-form .form-label {
+    text-align: left;
+}
+
+.reset-password-form .error-message {
+    text-align: left;
+}
+
+.reset-password-form .form-group {
+    margin-bottom: 16px;
+}
+
+.reset-password-form .login-button {
+    margin-top: 0;
+    background: var(--color-icon-primary);
+}
+
+.reset-password-form .login-button:hover:not(.loading) {
+    background: var(--color-icon-primary);
+}
+
+.reset-password-container {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.set-up-password-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.set-up-password-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 16px 16px 48px 0px var(--color-shadow-card);
+    padding: 24px 48px 48px 48px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease-out 0.2s forwards;
+    will-change: transform, opacity;
+}
+
+.set-up-password-form {
+    max-width: 404px;
+    margin: 0 auto;
+}
+
+.set-up-password-card .login-title {
+    margin-bottom: 8px;
+}
+
+.set-up-password-card .login-subtitle {
+    margin-bottom: 24px;
+}
+
+.set-up-password-form .form-label {
+    text-align: left;
+}
+
+.set-up-password-form .error-message {
+    text-align: left;
+}
+
+.set-up-password-form .form-group {
+    margin-bottom: 16px;
+}
+
+.set-up-password-form .form-group--retype-password {
+    margin-bottom: 16px;
+}
+
+.set-up-password-form .login-button {
+    margin-top: 0;
+    background: var(--color-icon-primary);
+}
+
+.set-up-password-form .login-button:hover:not(.loading) {
+    background: var(--color-icon-primary);
+}
+
+@media (max-width: 768px) {
+    .set-up-password-card {
+        padding: 24px 0 48px 0 !important;
+    }
+}
+
+.reset-password-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 16px 16px 48px 0px var(--color-shadow-card);
+    padding: 30px 24px 48px 24px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.6s ease-out 0.2s forwards;
+    will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+    .reset-password-card {
+        padding: 24px 0 48px 0 !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .success-card,
+    .success-icon,
+    .success-title,
+    .success-text,
+    .success-button {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+

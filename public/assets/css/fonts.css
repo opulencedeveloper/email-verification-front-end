@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'SFProDisplayRegular';
+    src: url('../fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+ 
+@font-face {
+    font-family: 'SFProDisplayMedium';
+    src: url('../fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFProDisplayBold';
+    src: url('../fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFProDisplayThinItalic';
+    src: url('../fonts/SFPRODISPLAYTHINITALIC.OTF') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFProDisplayUltraLightItalic';
+    src: url('../fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFProDisplayLightItalic';
+    src: url('../fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFProDisplaySemiBoldItalic';
+    src: url('../fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFProDisplayHeavyItalic';
+    src: url('../fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFProDisplayBlackItalic';
+    src: url('../fonts/SFPRODISPLAYBLACKITALIC.OTF') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Geist Font Family */
+@font-face {
+    font-family: 'GeistThin';
+    src: url('../fonts/Geist-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeistExtraLight';
+    src: url('../fonts/Geist-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeistLight';
+    src: url('../fonts/Geist-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeistRegular';
+    src: url('../fonts/Geist-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeistMedium';
+    src: url('../fonts/Geist-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeistSemiBold';
+    src: url('../fonts/Geist-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeistBold';
+    src: url('../fonts/Geist-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeistExtraBold';
+    src: url('../fonts/Geist-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeistBlack';
+    src: url('../fonts/Geist-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Manrope Font Family */
+@font-face {
+    font-family: 'ManropeExtraLight';
+    src: url('../fonts/Manrope-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ManropeLight';
+    src: url('../fonts/Manrope-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ManropeRegular';
+    src: url('../fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ManropeMedium';
+    src: url('../fonts/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ManropeSemiBold';
+    src: url('../fonts/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ManropeBold';
+    src: url('../fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ManropeExtraBold';
+    src: url('../fonts/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+p {
+    font-family: 'SFProDisplayRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    margin: 0px;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+
+/* button:hover {
+    transform: scale(1.05);
+} */
+
+body {
+    overflow-x: hidden;
+}

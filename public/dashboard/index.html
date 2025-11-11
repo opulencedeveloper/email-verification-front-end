@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Email Verification - Dashboard</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Email Verification Dashboard" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/fonts.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/dashboard/index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+        <span class="loader"></span>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <main id="content" class="dashboard-wrapper">
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <img src="/assets/icons/dashboard/menu.svg" alt="Menu" width="20" height="20">
+                    </button>
+                    <h1 class="app-title">EmailVerification</h1>
+                </div>
+                <div class="header-right">
+                    <button class="dark-mode-toggle" aria-label="Switch to Dark Mode">
+                        <span class="toggle-text">Switch to Dark Mode</span>
+                        <span class="toggle-switch">
+                            <span class="toggle-thumb"></span>
+                        </span>
+                    </button>
+                    <div class="user-avatar">
+                        <img src="/assets/icons/dashboard/avatar.svg" alt="User Avatar" width="20" height="20">
+                    </div>
+                </div>
+            </header>
+
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+            <div class="dashboard-content-wrapper">
+                <aside class="dashboard-sidebar" id="dashboard-sidebar">
+                    <nav class="sidebar-nav">
+                        <a href="/dashboard/index.html" class="nav-item nav-item--active">
+                            <img src="/assets/icons/dashboard/home.svg" alt="Dashboard" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                        <a href="/dashboard/history.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/history.svg" alt="History" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">History</span>
+                        </a>
+                        <a href="/dashboard/billing.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/wallet.svg" alt="Plan & Billing" class="nav-icon"
+                                width="16" height="16">
+                            <span class="nav-text">Plan & Billing</span>
+                        </a>
+                        <a href="/dashboard/settings.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/settings.svg" alt="Settings" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </nav>
+
+                    <div class="credit-card">
+                        <div class="credit-illustration">
+                            <img src="/assets/icons/dashboard/illustration.svg" alt="Credit Illustration" width="150"
+                                height="125">
+                        </div>
+                        <div class="credit-header">
+                            <h3 class="credit-title">Credit Remaining</h3>
+
+                            <span class="credit-value">45/50</span>
+                        </div>
+                        <div class="credit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <button class="upgrade-button">Upgrade</button>
+                    </div>
+
+                    <a href="/auth/sign-in.html" class="logout-link">
+                        <img src="/assets/icons/dashboard/logout.svg" alt="Log Out" class="logout-icon" width="20"
+                            height="20">
+                        <span class="logout-text">Log Out</span>
+                    </a>
+                </aside>
+
+                <main class="dashboard-main">
+                    <div class="dashboard-greeting">
+                        <h2 class="greeting-title">Hello Macdonald</h2>
+                        <p class="greeting-subtitle">Welcome to your dashboard</p>
+
+                    </div>
+
+                    <div class="dashboard-card validation-card">
+                        <div class="option-section">
+                            <h3 class="card-title">Choose an option</h3>
+                            <div class="option-buttons">
+                                <button class="option-btn option-btn--active" data-option="email-list">
+                                    <img src="/assets/icons/dashboard/email-list.svg" alt="Email List" width="20"
+                                        height="20">
+                                    <span>Email List</span>
+                                </button>
+                                <button class="option-btn" data-option="upload-file">
+                                    <img src="/assets/icons/dashboard/upload-file.svg" alt="Upload a file" width="20"
+                                        height="20">
+                                    <span>Upload a file</span>
+                                </button>
+                                <button class="option-btn" data-option="single-email">
+                                    <img src="/assets/icons/dashboard/send-email.svg" alt="Single Email" width="20"
+                                        height="20">
+                                    <span>Single Email</span>
+                                </button>
+                                <button class="option-btn" data-option="api">
+                                    <img src="/assets/icons/dashboard/unplug.svg" alt="Send from API" width="20"
+                                        height="20">
+                                    <span>Send from API</span>
+                                </button>
+                                <button class="option-btn" data-option="integrations">
+                                    <img src="/assets/icons/dashboard/branch.svg" alt="Integrations" width="20"
+                                        height="20">
+                                    <span>Integrations</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane tab-pane--active" data-tab="email-list">
+                                <div class="validation-textarea-wrapper">
+                                    <textarea id="email-list-textarea" class="validation-textarea"
+                                        placeholder="Please paste each address on a new line. Max 10,000 addresses at once."
+                                        rows="10"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" data-tab="upload-file">
+                                <div class="upload-area">
+                                    <div class="upload-icon">
+                                        <img src="/assets/icons/dashboard/bytesize_upload.svg" alt="Upload" width="56"
+                                            height="56">
+                                    </div>
+                                    <p class="upload-text">Drag and drop your files</p>
+                                    <p class="upload-formats">TXT, CSV, XLSX</p>
+
+                                    <button class="select-file-btn">Select File</button>
+                                    <p class="selected-file-name" style="display: none;"></p>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" data-tab="single-email">
+                                <div class="single-email-form">
+                                    <div class="single-email-input-wrapper">
+                                        <input type="email" class="single-email-input"
+                                            placeholder="Enter just one email">
+                                        <button class="validate-email-btn">Validate Email</button>
+                                    </div>
+                                    <div class="recent-validations">
+
+                                        <h4 class="recent-validations-title">Recent validations</h4>
+                                        <ul class="recent-validations-list">
+                                            <li><a href="#" class="recent-email-link">mcantu@stevens.com</a></li>
+                                            <li><a href="#" class="recent-email-link">shawnday@hotmail.com</a></li>
+                                            <li><a href="#" class="recent-email-link">jacqueline31@yahoo.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" data-tab="api">
+                                <div class="api-content">
+                                    <div class="api-key-section" id="api-key-section">
+                                        <h3 class="api-key-title">Get an API Key</h3>
+                                        <p class="api-key-text">Click the button below to get started</p>
+
+                                        <button class="generate-api-btn">Generate</button>
+                                    </div>
+                                    <div class="api-key-display" id="api-key-display" style="display: none;">
+                                        <div class="api-key-wrapper">
+                                            <label class="api-key-label">API Key</label>
+                                            <div class="api-key-field">
+                                                <span
+                                                    class="api-key-text">12342899hf8-4738-f842hf872489f-32738fhg78-fni23bf984</span>
+                                                <button class="copy-api-btn">
+                                                    <img src="/assets/icons/dashboard/copy-linear.svg" alt="Copy"
+                                                        width="24" height="24">
+                                                    <span>Copy</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="api-integration-section">
+                                            <h3 class="integration-title">Integrate with your codebase</h3>
+                                            <div class="code-editor-wrapper">
+                                                <div class="code-editor">
+                                                    <button class="copy-code-btn">
+                                                        <img src="/assets/icons/dashboard/copy-linear.svg" alt="Copy"
+                                                            width="24" height="24">
+                                                        <span>Copy</span>
+                                                    </button>
+                                                    <pre
+                                                        class="code-content"><code><span class="keyword">import</span> <span class="variable">fetch</span> <span class="keyword">from</span> <span class="string">'node-fetch'</span>;
+<span class="keyword">import</span> <span class="variable">createHttpsProxyAgent</span> <span class="keyword">from</span> <span class="string">'https-proxy-agent'</span>;
+
+<span class="keyword">const</span> <span class="variable">username</span> = <span class="string">'USER'</span>;
+<span class="keyword">const</span> <span class="variable">password</span> = <span class="string">'PASS'</span>;
+<span class="keyword">const</span> <span class="variable">proxy</span> = <span class="string">'us1.proximy.io:1111'</span>
+
+<span class="keyword">const</span> <span class="variable">agent</span> = <span class="function">createHttpsProxyAgent</span>(
+    <span class="template-string">`http://${<span class="variable">username</span>}:${<span class="variable">password</span>}@${<span class="variable">proxy</span>}`</span>
+);
+
+<span class="keyword">const</span> <span class="variable">response</span> = <span class="keyword">await</span> <span class="function">fetch</span>(<span class="string">'https://google.com'</span>, {
+    <span class="property">method</span>: <span class="string">'get'</span>,
+    <span class="property">agent</span>: <span class="variable">agent</span>,
+});
+
+<span class="variable">console</span>.<span class="function">log</span>(<span class="keyword">await</span> <span class="variable">response</span>.<span class="function">text</span>());</code></pre>
+
+                                                    <div class="language-tabs">
+                                                        <button class="language-tab language-tab--active"
+                                                            data-lang="nodejs">Node.js</button>
+                                                        <button class="language-tab" data-lang="curl">cURL</button>
+                                                        <button class="language-tab" data-lang="python">Python</button>
+                                                        <button class="language-tab" data-lang="php">PHP</button>
+                                                        <button class="language-tab" data-lang="go">GO</button>
+                                                        <button class="language-tab" data-lang="java">Java</button>
+                                                        <button class="language-tab" data-lang="csharp">C#</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" data-tab="integrations">
+                                <div class="integrations-grid">
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Mailchimp"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Mailchimp</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Mailjet"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Mailjet</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Hubspot"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Hubspot</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Elastic Email"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Elastic Email</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Campaign Monitor"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Campaign Monitor</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Reply" width="40"
+                                                    height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Reply</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Intercom"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Intercom</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Highrise"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Highrise</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Zapier" width="40"
+                                                    height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Zapier</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="PointerPro"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">PointerPro</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="FormKeep"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">FormKeep</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                    <div class="integration-card">
+                                        <div class="integration-header">
+                                            <div class="integration-icon">
+                                                <img src="/assets/icons/dashboard/mailchimp.svg" alt="Revue" width="40"
+                                                    height="40">
+                                            </div>
+                                            <div class="integration-text">
+                                                <h4 class="integration-name">Revue</h4>
+                                                <p class="integration-description">Popular email marketing and
+                                                    automation platform</p>
+                                            </div>
+                                        </div>
+                                        <button class="connect-btn">
+                                            <img src="/assets/icons/dashboard/connect.svg" alt="Connect" width="16"
+                                                height="16">
+                                            <span>Connect</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card results-section" id="results-section" style="display: none;">
+                        <h3 class="results-title">Results</h3>
+                        <div class="results-table-wrapper">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Email</th>
+                                        <th>Domain</th>
+                                        <th>Format</th>
+                                        <th>Deliverable</th>
+                                        <th>No blocklist</th>
+                                        <th>No catch-all</th>
+                                        <th>No generic</th>
+                                        <th>Free</th>
+                                        <th>Times</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>morancraig@stevens.com</td>
+                                        <td>hotmail.com</td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tsmith@davis.com</td>
+                                        <td>hotmail.com</td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>jameskayla@hotmail.com</td>
+                                        <td>hotmail.com</td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>jesus44@garrison.com</td>
+                                        <td>hotmail.com</td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>martin@barnes.com</td>
+                                        <td>hotmail.com</td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24"
+                                                height="24"></td>
+                                        <td>30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card results-placeholder" id="results-placeholder" style="display: none;">
+                        <p class="results-placeholder-text">The result will show here</p>
+                    </div>
+
+                    <div class="dashboard-card history-card">
+
+                        <h3 class="history-title">Previous List Validation</h3>
+                        <div class="history-list">
+                            <div class="history-item">
+                                <div class="history-item-content">
+                                    <h4 class="history-item-title">Untitled List</h4>
+                                    <p class="history-item-date">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="see-results-btn">See Results</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-item-content">
+                                    <h4 class="history-item-title">Untitled List</h4>
+                                    <p class="history-item-date">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="see-results-btn">See Results</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/dashboard.js" defer></script>
+</body>
+
+</html>

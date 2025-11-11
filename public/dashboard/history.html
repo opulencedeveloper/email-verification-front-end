@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Email Verification - Dashboard</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Email Verification Dashboard" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/fonts.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/dashboard/index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+        <span class="loader"></span>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <main id="content" class="dashboard-wrapper">
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <img src="/assets/icons/dashboard/menu.svg" alt="Menu" width="20" height="20">
+                    </button>
+                    <h1 class="app-title">EmailVerification</h1>
+                </div>
+                <div class="header-right">
+                    <button class="dark-mode-toggle" aria-label="Switch to Dark Mode">
+                        <span class="toggle-text">Switch to Dark Mode</span>
+                        <span class="toggle-switch">
+                            <span class="toggle-thumb"></span>
+                        </span>
+                    </button>
+                    <div class="user-avatar">
+                        <img src="/assets/icons/dashboard/avatar.svg" alt="User Avatar" width="20" height="20">
+                    </div>
+                </div>
+            </header>
+
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+            <div class="dashboard-content-wrapper">
+                <aside class="dashboard-sidebar" id="dashboard-sidebar">
+                    <nav class="sidebar-nav">
+                        <a href="/dashboard/index.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/home.svg" alt="Dashboard" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                        <a href="/dashboard/history.html" class="nav-item nav-item--active">
+                            <img src="/assets/icons/dashboard/history.svg" alt="History" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">History</span>
+                        </a>
+                        <a href="/dashboard/billing.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/wallet.svg" alt="Plan & Billing" class="nav-icon"
+                                width="16" height="16">
+                            <span class="nav-text">Plan & Billing</span>
+                        </a>
+                        <a href="/dashboard/settings.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/settings.svg" alt="Settings" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </nav>
+
+                    <div class="credit-card">
+                        <div class="credit-illustration">
+                            <img src="/assets/icons/dashboard/illustration.svg" alt="Credit Illustration" width="150"
+                                height="125">
+                        </div>
+                        <div class="credit-header">
+                            <h3 class="credit-title">Credit Remaining</h3>
+
+                            <span class="credit-value">45/50</span>
+                        </div>
+                        <div class="credit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <button class="upgrade-button">Upgrade</button>
+                    </div>
+
+                    <a href="/auth/sign-in.html" class="logout-link">
+                        <img src="/assets/icons/dashboard/logout.svg" alt="Log Out" class="logout-icon" width="20"
+                            height="20">
+                        <span class="logout-text">Log Out</span>
+                    </a>
+                </aside>
+
+                <main class="dashboard-main">
+                    <div class="dashboard-greeting">
+                        <h2 class="greeting-title">Hello Macdonald</h2>
+                        <p class="greeting-subtitle">Here is your previous validations</p>
+                    </div>
+
+                    <div class="dashboard-card history-card">
+                        <h3 class="history-title">Previous List Validation</h3>
+                        <div class="history-list">
+                            <div class="history-item">
+                                <div class="history-item-content">
+                                    <h4 class="history-item-title">Untitled List</h4>
+                                    <p class="history-item-date">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="see-results-btn">See Results</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-item-content">
+                                    <h4 class="history-item-title">Untitled List</h4>
+                                    <p class="history-item-date">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="see-results-btn">See Results</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-item-content">
+                                    <h4 class="history-item-title">Untitled List</h4>
+                                    <p class="history-item-date">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="see-results-btn">See Results</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-item-content">
+                                    <h4 class="history-item-title">Untitled List</h4>
+                                    <p class="history-item-date">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="see-results-btn">See Results</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-item-content">
+                                    <h4 class="history-item-title">Untitled List</h4>
+                                    <p class="history-item-date">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="see-results-btn">See Results</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-item-content">
+                                    <h4 class="history-item-title">Untitled List</h4>
+                                    <p class="history-item-date">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="see-results-btn">See Results</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/history.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #252525;
+    --secondary-color: #1452CA;
+    --tertiary-color: #CC0000;
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-text-light: #F8FAFC;
+    --color-bg-light: #FAFAFA;
+    --color-text-primary: #020617;
+    --color-text-dark: #0F172A;
+    --color-text-secondary: #64748B;
+    --color-text-formats: #475569;
+    --color-text-tertiary: #737373;
+    --color-text-quaternary: #404040;
+    --color-text-placeholder: #999;
+    --color-border: #E2E8F0;
+    --color-border-focus: #E2E8F0;
+    --color-border-light-blue: #E2E8F0;
+    --color-border-history: #E0E0E0;
+    --color-border-hover: #3367d6;
+    --color-link: #4285F4;
+    --color-link-hover: #3367d6;
+    --color-error: #CC0000;
+    --color-success: #4CAF50;
+    --color-button-gradient-start: #FFB84D;
+    --color-button-gradient-end: #FF7A5C;
+    --color-icon-primary: #F59D00;
+    --color-shadow-black: rgba(0, 0, 0, 0.08);
+    --color-shadow-card: #0000001F;
+    --color-shadow-history: #25252514;
+    --color-shadow-focus: rgba(66, 133, 244, 0.1);
+    --color-shadow-button: rgba(252, 74, 26, 0.3);
+    --color-overlay-white: rgba(255, 255, 255, 0.3);
+    --color-sidebar-bg: #F1F5F94D;
+    --color-nav-active-bg: #F1F5F9;
+    
+    --max-width: 1200px;
+    --desktop-padding: 40px;
+    --mobile-padding: 16px;
+    --desktop-dash-padding: 56px;
+}

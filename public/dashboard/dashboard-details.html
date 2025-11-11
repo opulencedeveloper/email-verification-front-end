@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Email Verification - Dashboard</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Email Verification Dashboard" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/fonts.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/dashboard/index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+        <span class="loader"></span>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <main id="content" class="dashboard-wrapper">
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <img src="/assets/icons/dashboard/menu.svg" alt="Menu" width="20" height="20">
+                    </button>
+                    <h1 class="app-title">EmailVerification</h1>
+                </div>
+                <div class="header-right">
+                    <button class="dark-mode-toggle" aria-label="Switch to Dark Mode">
+                        <span class="toggle-text">Switch to Dark Mode</span>
+                        <span class="toggle-switch">
+                            <span class="toggle-thumb"></span>
+                        </span>
+                    </button>
+                    <div class="user-avatar">
+                        <img src="/assets/icons/dashboard/avatar.svg" alt="User Avatar" width="20" height="20">
+                    </div>
+                </div>
+            </header>
+
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+            <div class="dashboard-content-wrapper">
+                <aside class="dashboard-sidebar" id="dashboard-sidebar">
+                    <nav class="sidebar-nav">
+                        <a href="/dashboard/index.html" class="nav-item nav-item--active">
+                            <img src="/assets/icons/dashboard/home.svg" alt="Dashboard" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                        <a href="/dashboard/history.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/history.svg" alt="History" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">History</span>
+                        </a>
+                        <a href="/dashboard/billing.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/wallet.svg" alt="Plan & Billing" class="nav-icon"
+                                width="16" height="16">
+                            <span class="nav-text">Plan & Billing</span>
+                        </a>
+                        <a href="/dashboard/settings.html" class="nav-item">
+                            <img src="/assets/icons/dashboard/settings.svg" alt="Settings" class="nav-icon" width="16"
+                                height="16">
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </nav>
+
+                    <div class="credit-card">
+                        <div class="credit-illustration">
+                            <img src="/assets/icons/dashboard/illustration.svg" alt="Credit Illustration" width="150"
+                                height="125">
+                        </div>
+                        <div class="credit-header">
+                            <h3 class="credit-title">Credit Remaining</h3>
+
+                            <span class="credit-value">45/50</span>
+                        </div>
+                        <div class="credit-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <button class="upgrade-button">Upgrade</button>
+                    </div>
+
+                    <a href="/auth/sign-in.html" class="logout-link">
+                        <img src="/assets/icons/dashboard/logout.svg" alt="Log Out" class="logout-icon" width="20"
+                            height="20">
+                        <span class="logout-text">Log Out</span>
+                    </a>
+                </aside>
+
+                <main class="dashboard-main">
+                    <div class="details-container">
+                        <div class="back-button">
+                            <img src="/assets/icons/dashboard/back.svg" alt="Back" width="16" height="16">
+                            <span>Back</span>
+                        </div>
+
+                        <div class="details-content">
+                            <div class="details-header">
+                                <div class="details-title-section">
+                                    <h1 class="details-title">Untitled list</h1>
+                                    <p class="details-subtitle">Created 10/28/2025, 3:30 PM</p>
+                                </div>
+                                <button class="select-file-btn">
+                                    <img src="/assets/icons/dashboard/download-icon.svg" alt="Download" width="14" height="14">
+                                    <span>Select File</span>
+                                </button>
+                            </div>
+
+                            <div class="details-summary">
+                                <div class="chart-section">
+                                    <div class="donut-chart">
+                                        <svg class="donut-chart-svg" viewBox="0 0 200 200">
+                                            <circle class="donut-segment donut-segment-purple" cx="100" cy="100" r="80" fill="none" stroke="#800080" stroke-width="20" stroke-dasharray="125.66 502.65" stroke-dashoffset="0" transform="rotate(-90 100 100)"></circle>
+                                            <circle class="donut-segment donut-segment-red" cx="100" cy="100" r="80" fill="none" stroke="#FF0000" stroke-width="20" stroke-dasharray="125.66 502.65" stroke-dashoffset="-125.66" transform="rotate(-90 100 100)"></circle>
+                                            <circle class="donut-segment donut-segment-blue" cx="100" cy="100" r="80" fill="none" stroke="#3333FF" stroke-width="20" stroke-dasharray="125.66 502.65" stroke-dashoffset="-251.32" transform="rotate(-90 100 100)"></circle>
+                                            <circle class="donut-segment donut-segment-green" cx="100" cy="100" r="80" fill="none" stroke="#008000" stroke-width="20" stroke-dasharray="125.66 502.65" stroke-dashoffset="-376.98" transform="rotate(-90 100 100)"></circle>
+                                        </svg>
+                                        <div class="donut-chart-center">
+                                            <span class="donut-chart-value">4/4</span>
+                                        </div>
+                                    </div>
+                                    <div class="chart-legend">
+                                        <div class="legend-item">
+                                            <div class="legend-color legend-color-purple"></div>
+                                            <div class="legend-text">
+                                                <strong>Deliverable</strong>
+                                                <span>The email address is valid and messages can be successfully sent.</span>
+                                            </div>
+                                        </div>
+                                        <div class="legend-item">
+                                            <div class="legend-color legend-color-red"></div>
+                                            <div class="legend-text">
+                                                <strong>Undeliverable</strong>
+                                                <span>The email address is invalid, and messages cannot be delivered.</span>
+                                            </div>
+                                        </div>
+                                        <div class="legend-item">
+                                            <div class="legend-color legend-color-blue"></div>
+                                            <div class="legend-text">
+                                                <strong>Risky</strong>
+                                                <span>The email address appears valid, but its ability to receive messages is uncertain.</span>
+                                            </div>
+                                        </div>
+                                        <div class="legend-item">
+                                            <div class="legend-color legend-color-green"></div>
+                                            <div class="legend-text">
+                                                <strong>Unknown</strong>
+                                                <span>The email format is correct, but communication with the recipient's server was unsuccessful.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card results-section">
+                            <h3 class="results-title">Results</h3>
+                            <div class="results-table-wrapper">
+                                <table class="results-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Email</th>
+                                            <th>Domain</th>
+                                            <th>Format</th>
+                                            <th>Deliverable</th>
+                                            <th>No blocklist</th>
+                                            <th>No catch-all</th>
+                                            <th>No generic</th>
+                                            <th>Free</th>
+                                            <th>Times</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>morancraig@stevens.com</td>
+                                            <td>hotmail.com</td>
+                                            <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24" height="24"></td>
+                                            <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24" height="24"></td>
+                                            <td><img src="/assets/icons/dashboard/check.svg" alt="Check" width="24" height="24"></td>
+                                            <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24" height="24"></td>
+                                            <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24" height="24"></td>
+                                            <td><img src="/assets/icons/dashboard/close.svg" alt="Close" width="24" height="24"></td>
+                                            <td style="text-align: right;">30,</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/dashboard.js" defer></script>
+</body>
+
+</html>
