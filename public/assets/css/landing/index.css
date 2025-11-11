@@ -2460,6 +2460,11 @@ section.animate-in::after {
     border: 2px solid #F59D00;
 }
 
+.pricing-card-selected {
+    border: 2px solid #F59D00;
+    box-shadow: 0 0 0 4px rgba(245, 157, 0, 0.1);
+}
+
 .pricing-price {
     margin-bottom: 12px;
     display: flex;

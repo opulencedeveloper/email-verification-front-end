@@ -1,10 +1,14 @@
 .spinner-body {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100dvh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99999999999999999999999;
+    z-index: 999999;
+    background: rgba(8, 3, 28, 0.95);
   }
 
   .loader {
@@ -20,13 +24,13 @@
   height: 24px;
   position: absolute;
   border-radius: 50%;
-  background: #FF3D00;
+  background: #F59D00;
   animation: flipY 1s linear infinite;
   transform-origin: 50% 50%;
 }
 .loader:before {
   transform-origin: 0% 100%;
-  background: #fff;
+  background: #08031C;
 }
 @keyframes spin {
   to {

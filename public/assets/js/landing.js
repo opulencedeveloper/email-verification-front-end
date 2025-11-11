@@ -10,10 +10,29 @@
             this.handleMobileMenu();
             this.handlePricingToggle();
             this.handleFAQ();
-            this.initScrollAnimations();
             this.initParallaxEffects();
             this.initHoverAnimations();
             this.scrollToHash();
+            // Delay scroll animations until page is fully loaded to prevent shaking
+            this.initScrollAnimationsDelayed();
+        },
+        
+        initScrollAnimationsDelayed: function() {
+            // Wait for page to be fully loaded before initializing scroll animations
+            if (document.readyState === 'complete') {
+                // Page already loaded, wait a bit for layout to stabilize
+                setTimeout(() => {
+                    this.initScrollAnimations();
+                }, 300);
+            } else {
+                // Wait for window load event
+                window.addEventListener('load', () => {
+                    // Additional delay to ensure layout is stable
+                    setTimeout(() => {
+                        this.initScrollAnimations();
+                    }, 300);
+                });
+            }
         },
 
         handleSmoothScroll: function() {
@@ -309,6 +328,35 @@
                 });
             };
             
+            // Handle "Choose Plan" button clicks to select the card
+            const pricingCtaButtons = document.querySelectorAll('.pricing-cta');
+            pricingCtaButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const card = this.closest('.pricing-card');
+                    if (card) {
+                        // Remove selected class from all cards
+                        const allCards = document.querySelectorAll('.pricing-card');
+                        allCards.forEach(c => {
+                            c.classList.remove('pricing-card-selected');
+                            // Reset all buttons to secondary
+                            const cta = c.querySelector('.pricing-cta');
+                            if (cta) {
+                                cta.classList.remove('pricing-cta-primary');
+                                cta.classList.add('pricing-cta-secondary');
+                            }
+                        });
+                        
+                        // Add selected class to the clicked card
+                        card.classList.add('pricing-card-selected');
+                        
+                        // Change button to primary style
+                        this.classList.remove('pricing-cta-secondary');
+                        this.classList.add('pricing-cta-primary');
+                    }
+                });
+            });
+            
             // Handle card clicks to add/remove featured border
             const pricingCards = document.querySelectorAll('.pricing-card');
             pricingCards.forEach(card => {
@@ -397,11 +445,13 @@
         },
 
         initScrollAnimations: function() {
-            // Intersection Observer for scroll-triggered animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
+            // Use requestAnimationFrame to ensure layout is stable before observing
+            requestAnimationFrame(() => {
+                // Intersection Observer for scroll-triggered animations
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -100px 0px'
+                };
             
             // More strict observer for feature cards to trigger later
             const featureCardObserverOptions = {
@@ -574,7 +624,7 @@
             if (footerCopyright) {
                 observer.observe(footerCopyright);
             }
-            
+            }); // Close requestAnimationFrame
         },
 
         initParallaxEffects: function() {
