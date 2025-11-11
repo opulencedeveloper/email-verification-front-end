@@ -488,7 +488,12 @@
             // Observe sections
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
-                section.classList.add('fade-in-up');
+                // Use custom animation for features-section, default for others
+                if (section.classList.contains('features-section')) {
+                    // Features section uses its own animation (no fade-in-up class)
+                } else {
+                    section.classList.add('fade-in-up');
+                }
                 observer.observe(section);
             });
 
